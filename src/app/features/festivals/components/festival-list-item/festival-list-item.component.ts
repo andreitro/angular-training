@@ -5,10 +5,6 @@ import { Component, OnInit, Input } from '@angular/core';
   templateUrl: './festival-list-item.component.html',
   styleUrls: ['./festival-list-item.component.scss']
 })
-export class FestivalListItemComponent implements OnInit {
+export class FestivalListItemComponent {
   @Input() festival: any;
-  constructor() { }
-  ngOnInit() {
-  }
-
 }

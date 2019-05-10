@@ -3,10 +3,10 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: '', pathMatch: 'full', loadChildren: './features/landing/landing.module#LandingModule'
+    path: 'festivals', loadChildren: './features/festivals/festivals.module#FestivalsModule'
   },
   {
-    path: 'festivals', loadChildren: './features/festivals/festivals.module#FestivalsModule'
+    path: '', pathMatch: 'full', loadChildren: './features/landing/landing.module#LandingModule'
   }
 ];
 
