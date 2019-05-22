@@ -12,9 +12,22 @@ export class FestivalService {
   getAllFestivals(): Observable<any> {
     return this.http.get(this.festivalsUrl);
   }
+
   getFestival(id: number): Observable<any> {
     const url = `${this.festivalsUrl}/?id=${id}`;
     return this.http.get(url);
+  }
+
+  createFestival(festival): Observable<any> {
+    return this
+      .http
+      .post(`${this.festivalsUrl}`, festival);
+  }
+
+  editFestival(festival, id): Observable<any> {
+    return this
+      .http
+      .put(`${this.festivalsUrl}/?id=${id}`, festival);
   }
 }
 

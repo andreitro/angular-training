@@ -1,12 +1,15 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { NgModule } from "@angular/core";
+import { Routes, RouterModule } from "@angular/router";
 
 const routes: Routes = [
   {
-    path: '', pathMatch: 'full', loadChildren: './features/landing/landing.module#LandingModule'
+    path: "festivals",
+    loadChildren: "./features/festivals/festivals.module#FestivalsModule"
   },
   {
-    path: 'festivals', loadChildren: './features/festivals/festivals.module#FestivalsModule'
+    path: "",
+    pathMatch: "full",
+    loadChildren: "./features/landing/landing.module#LandingModule"
   }
 ];
 
@@ -14,4 +17,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

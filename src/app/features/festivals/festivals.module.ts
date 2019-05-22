@@ -8,15 +8,18 @@ import { FestivalsRoutingModule } from './festivals-routing.module';
 import { FestivalService } from '../services/festival.service';
 import { FestivalListItemComponent } from './components/festival-list-item/festival-list-item.component';
 import { FestivalsListPageComponent } from './pages/festivals-list-page/festivals-list-page.component';
-import { FestivalFormComponent } from './pages/festival-form/festival-form.component';
+import { FestivalFormComponent } from './components/festival-form/festival-form.component';
+import { CreateFestivalPageComponent } from './pages/create-festival-page/create-festival-page.component';
+import { EditFestivalPageComponent } from './pages/edit-festival-page/edit-festival-page.component';
 
 @NgModule({
-  declarations: [FestivalsListPageComponent, FestivalDetailsPageComponent, FestivalListItemComponent, FestivalFormComponent],
+// tslint:disable-next-line: max-line-length
+  declarations: [FestivalsListPageComponent, FestivalDetailsPageComponent, FestivalListItemComponent, FestivalFormComponent, CreateFestivalPageComponent, EditFestivalPageComponent],
   imports: [
     SharedModule,
     FestivalsRoutingModule,
     FormsModule
   ],
-  providers:[FestivalService]
+  providers: [FestivalService]
 })
 export class FestivalsModule { }

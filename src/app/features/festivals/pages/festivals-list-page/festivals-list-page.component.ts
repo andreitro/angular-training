@@ -8,9 +8,9 @@ import { Observable } from 'rxjs';
   styleUrls: ['./festivals-list-page.component.scss']
 })
 export class FestivalsListPageComponent implements OnInit {
- festivals: Observable<any[]>;
+  festivals: Observable<any[]>;
 
-  constructor(private festivalService: FestivalService) { }
+  constructor(private festivalService: FestivalService) {}
 
   ngOnInit() {
     this.festivals = this.festivalService.getAllFestivals();
